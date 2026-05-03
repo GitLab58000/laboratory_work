@@ -1,18 +1,16 @@
 #include <iostream>
 #include <string>
-#include <windows.h>
+#include <clocale>
 using namespace std;
 
-struct Student {
-    string lastName;
-    string firstName;
-    double averageGrade;
-    char gender; 
-};
-
 int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    setlocale(LC_ALL, "Ukrainian");
+    struct Student {
+        string lastName;
+        string firstName;
+        double averageGrade;
+        char gender; 
+    };
 
     Student students[4] = {
         {"Коваленко", "Анна", 4.5, 'f'},
